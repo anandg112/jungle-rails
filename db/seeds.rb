@@ -180,8 +180,8 @@ prod1.reviews.create!({
 
 prod2.reviews.create!({
   user_id: 2,
-  description: 'nice',
-  rating: 1
+  description: 'Nice pants',
+  rating: 5
 })
 
 prod3.reviews.create!({
