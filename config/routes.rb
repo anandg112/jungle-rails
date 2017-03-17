@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     delete :remove_item
   end
 
+  resources :products, only: [:index, :show] do
+    resource :reviews, only: [:create]
+  end
+
   resources :orders, only: [:create, :show]
 
   get '/login' => 'sessions#new'
