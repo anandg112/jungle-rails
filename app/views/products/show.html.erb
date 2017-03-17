@@ -27,9 +27,21 @@
     </div>
 
         <div class="row">
+
+        <%= form_for [@product, @review]  do |f| %>
+          <dt>
+          Comments:
+          </dt>
+          <dd><%= f.text_area :description %></dd>
+          <dt></dt>
+          <dd>
+            <%= f.submit "Submit review" %>
+            <%= f.select(:rating, [[1],[2],[3],[4],[5]])%>
+          </dd>
+        <% end %>
+
         <dl class="dl-vertical">
-          <dd><h2>Reviews</h2></dd>
-          <% console %>
+          <dd><h3>Reviews</h3></dd>
             <% @product.reviews.each do |review| %>
               <dt><%= review.user.first_name %> <%= review.user.last_name %>:</dt>
               <dd><%= review.description %></dd>
