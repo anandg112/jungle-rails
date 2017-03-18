@@ -174,8 +174,8 @@ prod3 = Product.find(3)
 
 prod1.reviews.create!({
     user_id: 1,
-    description: 'lol',
-    rating: 2
+    description: 'Great usage',
+    rating: 3
 })
 
 prod2.reviews.create!({
@@ -186,17 +186,17 @@ prod2.reviews.create!({
 
 prod3.reviews.create!({
   user_id: 3,
-  description: 'what',
+  description: 'This is the best',
   rating: 4
 })
 prod3.reviews.create!({
   user_id: 1,
-  description: 'hey thats mine',
-  rating: 1
+  description: 'Hey thats mine',
+  rating: 4
 })
 prod3.reviews.create!({
   user_id: 4,
-  description: 'why are the voices',
+  description: 'Nice ones',
   rating: 5
 })
 

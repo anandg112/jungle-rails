@@ -42,17 +42,20 @@
 
         <dl class="dl-vertical">
           <dd><h3>Reviews</h3></dd>
-            <% @product.reviews.each do |review| %>
+            <% @product.reviews.reverse.each do |review| %>
               <dt><%= review.user.first_name %> <%= review.user.last_name %>:</dt>
               <dd><%= review.description %></dd>
               <dt>Rating:</dt>
               <dd><%= review.rating %>/5</dd>
-              <br>
-            <% end %>
-        </dl>
+              <% if review.user_id == session[:user_id] %>
+                <dd><%= link_to fa_icon('trash'), review_path(review), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Confirm" } %></dd>
+              <% end %>
+            <br>
+          <% end %>
+          </dl>
       </div>
 
-
+    </div>
 
   </article>
 
