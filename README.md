@@ -2,7 +2,7 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
-# Jungle App deployed at: 
+## Deployed at:
 https://polar-refuge-64109.herokuapp.com/
 
 ## Setup
